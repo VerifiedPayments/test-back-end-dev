@@ -34,7 +34,7 @@ It should return list of transactions in format you prefer most (json, xml, or a
 
 You should make service that will call - https://verifiedpayments.com/test.php
 * POST (For transaction creation) with json fields recipient, amount, currency - it will return transaction identifier (it's dummy random now but imagine that it's unique) on success or error if something happened, although it can return malicious json or die. 
-* PUT (For transaction confirmation) with json field transaction - it will return message 'success' on success or error if something happened (already processed, insufficient funds, or something else), although it can return malicious json or die. (in last 2 cases it doesn't mean that transaction failed)
+* GET (For transaction confirmation) with json field transaction - it will return message 'success' on success or error if something happened (already processed, insufficient funds, or something else), although it can return malicious json or die. (in last 2 cases it doesn't mean that transaction failed)
 Have in mind that your application can fail for some reason beyond your control to and that this service is one of n and it can be changed by other easily. (And all possible cases you can imagine are available and communication with client is for your choose)
 
 ### Cancel transaction functionality
