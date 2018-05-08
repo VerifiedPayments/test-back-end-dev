@@ -24,7 +24,7 @@ It should store message content to database from SWIFT MT103 message (sender_id,
 * recipient - value from 4 field with key 20 (5387354)
 * currency - value from 4 field with key 32A 3 characters after date (first 6 digits) (USD)
 * amount - value from 4 field with key 32A characters after currency (1101,)
-* details - json with rest values from field 4 (some values can be arrays like (71F), and some values can be multiline (for example - 50A) **those new lines will never start with: but can contain it**)
+* details - json with rest values from field 4 (some values can be arrays like (71F), and some values can be multiline (for example - 50A) **those new lines will never start with ":" character but can contain it**)
 
 And it should return success or error if it failed to parse message or one of those 6 fields was missing, or it's duplicate message (sender_id, transaction_id together they are unique). You will find examples of SWIFT MT103 messages on bottom
 
