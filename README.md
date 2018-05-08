@@ -5,7 +5,7 @@
 We want you to develop a small application that allows sending money using 3'rd party service. Application needs to be a REST API.
 
 * Application must have 4 endpoints:
-  * To add transaction (POST [content: SWIFT MT103 message])
+  * To add transaction (POST [content body: SWIFT MT103 message])
   * List all transactions (GET with filtering posibility (sender_id, transaction_id, recipient, amount, currency, processed))
   * To process transaction (PUT [uri with: transaction_id])
   * To cancel transaction (DELETE [uri with: transaction_id])
